@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://h305lm34qb0k"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_lwude"]
+[ext_resource type="Texture2D" uid="uid://c4fb1np6cig7q" path="res://Blob e.png" id="2_ecvuf"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_06p8r"]
+radius = 3.25976
+height = 7.8
+
+[node name="poop" type="CharacterBody2D"]
+position = Vector2(100.67, -97.2124)
+scale = Vector2(0.984517, 0.985474)
+script = ExtResource("1_lwude")
+
+[node name="BlobE" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(0.874817, 1)
+texture = ExtResource("2_ecvuf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.1)
+shape = SubResource("CapsuleShape2D_06p8r")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -12)
+zoom = Vector2(1.5, 1.5)
