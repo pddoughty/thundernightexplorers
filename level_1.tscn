@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=4 uid="uid://bekkn3vl20u31"]
+[gd_scene load_steps=7 format=4 uid="uid://bekkn3vl20u31"]
 
 [ext_resource type="PackedScene" uid="uid://c0o2r5msvnkhs" path="res://level1.tmx" id="1_00k1n"]
 [ext_resource type="PackedScene" uid="uid://h305lm34qb0k" path="res://player.tscn" id="2_awtmo"]
 [ext_resource type="PackedScene" uid="uid://dlw1h3h12tyvw" path="res://level2.tmx" id="3_v35j6"]
 [ext_resource type="PackedScene" uid="uid://bwk7n1cfo607l" path="res://level3.tmx" id="4_ib1nh"]
 [ext_resource type="Texture2D" uid="uid://cffrusa8rcvs6" path="res://map.png" id="5_ly87t"]
+[ext_resource type="PackedScene" uid="uid://bew25k4r40kie" path="res://enemy.tscn" id="6_eo8bd"]
 
 [node name="level1" instance=ExtResource("1_00k1n")]
 position = Vector2(1883, -512)
@@ -29,3 +30,6 @@ position = Vector2(-1524.78, -53.7489)
 [node name="Map" type="Sprite2D" parent="." index="5"]
 position = Vector2(-2268.21, 181.817)
 texture = ExtResource("5_ly87t")
+
+[node name="Node2D" parent="." index="6" instance=ExtResource("6_eo8bd")]
+position = Vector2(64.9308, 482.412)
