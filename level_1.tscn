@@ -31,5 +31,5 @@ position = Vector2(-1524.78, -53.7489)
 position = Vector2(-2268.21, 181.817)
 texture = ExtResource("5_ly87t")
 
-[node name="Node2D" parent="." index="6" instance=ExtResource("6_eo8bd")]
+[node name="Enemy" parent="." index="6" instance=ExtResource("6_eo8bd")]
 position = Vector2(64.9308, 482.412)

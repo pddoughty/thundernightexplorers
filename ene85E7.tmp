@@ -1,16 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://bew25k4r40kie"]
+[gd_scene load_steps=5 format=3 uid="uid://bew25k4r40kie"]
 
 [ext_resource type="Script" path="res://enemy.gd" id="1_55x4n"]
 [ext_resource type="Texture2D" uid="uid://cjode3lldmad2" path="res://tilemap_packed.png" id="1_encxo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4gfru"]
-size = Vector2(6, 7)
+size = Vector2(8, 7)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vgtw7"]
 size = Vector2(8, 1)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_o1nlh"]
-size = Vector2(8, 7)
 
 [node name="Node2D" type="CharacterBody2D"]
 script = ExtResource("1_55x4n")
@@ -26,18 +23,9 @@ position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_4gfru")
 
 [node name="Area2D" type="Area2D" parent="."]
-collision_layer = 2
-collision_mask = 2
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0, -3.5)
 shape = SubResource("RectangleShape2D_vgtw7")
 
-[node name="Area2D2" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
-position = Vector2(0, 0.5)
-shape = SubResource("RectangleShape2D_o1nlh")
-
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Area2D2" to="." method="_on_area_2d_2_area_entered"]

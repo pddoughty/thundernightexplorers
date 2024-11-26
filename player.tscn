@@ -1,11 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://h305lm34qb0k"]
+[gd_scene load_steps=5 format=3 uid="uid://h305lm34qb0k"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_lwude"]
 [ext_resource type="Texture2D" uid="uid://c4fb1np6cig7q" path="res://Blob e.png" id="2_ecvuf"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_06p8r"]
 radius = 3.25976
-height = 7.8
+height = 7.40817
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ngsb7"]
+size = Vector2(7.1101, 1.01474)
 
 [node name="poop" type="CharacterBody2D"]
 position = Vector2(100.67, -97.2124)
@@ -24,3 +27,19 @@ shape = SubResource("CapsuleShape2D_06p8r")
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -12)
 zoom = Vector2(1.5, 1.5)
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.172691, 3.76716)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_ngsb7")
+
+[node name="HitBox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+position = Vector2(0, -0.215)
+scale = Vector2(1.1, 1)
+shape = SubResource("CapsuleShape2D_06p8r")
